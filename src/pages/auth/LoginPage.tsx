@@ -5,12 +5,12 @@ export default function LoginPage() {
       <div
         className="absolute inset-0 bg-center bg-cover"
         style={{
-          backgroundImage: "url('/images/auth/ImgBg1920.png')",
+          backgroundImage: "url('/images/auth/ImgBgAuth.png')",
         }}
       />
 
       {/* Затемнение / оверлей (по желанию) */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 " />
 
       {/* Левая часть — форма */}
       <div className="relative z-10 flex flex-col justify-center px-32">
@@ -22,7 +22,7 @@ export default function LoginPage() {
             <input
               type="text"
               placeholder="Введите логин"
-              className="bg-transparent border border-[#2A2A2A] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
+              className="bg-transparent border border-[#ffffff] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
             />
           </div>
 
@@ -31,7 +31,7 @@ export default function LoginPage() {
             <input
               type="password"
               placeholder="Введите пароль"
-              className="bg-transparent border border-[#2A2A2A] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
+              className="bg-transparent border  border-[#ffffff] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
             />
           </div>
 
