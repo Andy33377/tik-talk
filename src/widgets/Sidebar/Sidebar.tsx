@@ -5,7 +5,7 @@ interface SidebarProps {
 export default function Sidebar({ className }: SidebarProps) {
   return (
     <div
-      className={`w-64 bg-[#0F0F0F] border-r border-white/10 p-6 flex flex-col h-screen ${className ?? ""}`}
+      className={`w-64 bg-[#000000] border-r border-white/10 p-6 flex flex-col h-screen ${className ?? ""}`}
     >
       <div className="flex items-center gap-2 mb-8">
         <img src="/images/sidebar/logo-sm-sidebar.svg" alt="logo-sm" />
@@ -62,13 +62,13 @@ export default function Sidebar({ className }: SidebarProps) {
         </a>
       </div>
 
-      <div className="mt-auto flex items-center gap-3 pt-4 border-t border-white/10">
+      <div className="mt-auto flex items-center gap-3 pt-4 border-t ">
         <div className="w-8 h-8 bg-gray-600 rounded-full"></div>
         <div className="flex-1">
           <div className="text-sm font-medium">ryan.gosling</div>
         </div>
         <button className="text-gray-400 hover:text-white">
-          <img src="/images/sidebar/settings.svg" alt="logo-sm" />
+          <img src="/images/white-settings.svg" alt="logo-sm" />
         </button>
       </div>
     </div>

@@ -10,8 +10,8 @@ export default function App() {
     <div>
       {/* <EditProfilePage /> */}
       {/* <LoginPage /> */}
-      {/* <ProfilePage /> */}
-      <SearchPage />
+      <ProfilePage />
+      {/* <SearchPage /> */}
       {/* <AdvancedSearchPage /> */}
       {/* <ChatPage /> */}
     </div>

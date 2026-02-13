@@ -19,20 +19,37 @@ export default function LoginPage() {
         <div className="flex flex-col gap-6 w-[420px]">
           <div className="flex flex-col gap-2">
             <label className="text-sm text-gray-400">Telegram username</label>
-            <input
-              type="text"
-              placeholder="Введите логин"
-              className="bg-transparent border border-[#ffffff] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
-            />
+
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Введите логин"
+                className="w-full bg-transparent border border-white rounded-lg pl-4 pr-12 py-3 outline-none focus:border-[#9B78FF] transition"
+              />
+              <img
+                src="/images/telega.svg"
+                alt=""
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 opacity-70 cursor-pointer"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col gap-2">
             <label className="text-sm text-gray-400">Пароль</label>
-            <input
-              type="password"
-              placeholder="Введите пароль"
-              className="bg-transparent border  border-[#ffffff] rounded-lg px-4 py-3 outline-none focus:border-[#9B78FF] transition"
-            />
+
+            <div className="relative">
+              <input
+                type="password"
+                placeholder="Введите пароль"
+                className="w-full bg-transparent border border-white rounded-lg pl-4 pr-12 py-3 outline-none focus:border-[#9B78FF] transition"
+              />
+
+              <img
+                src="/images/eye.svg"
+                alt=""
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 opacity-70 cursor-pointer"
+              />
+            </div>
           </div>
 
           <button className="mt-4 bg-[#9B78FF] text-black font-medium py-3 rounded-lg hover:bg-[#b091ff] transition">

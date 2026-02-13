@@ -11,42 +11,48 @@ export default function ProfileSidebar({
 }: ProfileSidebarProps) {
   return (
     <div className="space-y-8">
-      <div>
-        <h3 className="text-sm text-gray-400 mb-3">Подписчики</h3>
-        <div className="flex items-center gap-2 flex-wrap">
+      {/* Подписчики */}
+      <section>
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-extrabold text-[18px] leading-[24px] tracking-[0px]">
+            Подписчики
+          </h3>
+          <span className="inline-flex h-[18px] w-[26px] text-[12px] bg-[#98E9AB] text-black items-center justify-center">
+            28
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
           {subscribers.slice(0, 5).map((s) => (
             <img
               key={s.id}
               src={s.avatarUrl}
               alt={s.name}
-              className="w-10 h-10 rounded-full object-cover border-2 border-[#0A0A0A]"
+              className="w-8 h-8 rounded-full object-cover"
             />
           ))}
-          <img src="/images/plus.svg" alt="more subscribers" />
-          <span className="bg-[#9B78FF] text-black text-xs px-2 py-0.5 rounded-full font-medium">
-            28
-          </span>
         </div>
-      </div>
+      </section>
 
-      <div>
+      {/* Навыки */}
+      <section>
         <h3 className="text-sm text-gray-400 mb-3">Навыки</h3>
         <div className="flex gap-2 flex-wrap">
           {user.skills.map((skill) => (
             <span
               key={skill}
-              className="px-3 py-1 border border-white/30 rounded text-sm"
+              className="px-3 py-1 border border-white/30 rounded text-xs uppercase tracking-wide"
             >
               {skill}
             </span>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div>
+      {/* О себе */}
+      <section>
         <h3 className="text-sm text-gray-400 mb-3">О себе</h3>
         <p className="text-sm text-gray-300 leading-relaxed">{user.about}</p>
-      </div>
+      </section>
     </div>
   );
 }

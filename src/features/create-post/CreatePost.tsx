@@ -6,7 +6,7 @@ interface CreatePostProps {
 
 export default function CreatePost({ user }: CreatePostProps) {
   return (
-    <div className="flex items-center gap-4 p-4 bg-[#141414] rounded-lg border border-white/10 mb-6">
+    <div className="flex items-center gap-4 px-6 py-4 bg-[#141414] border border-white/15 rounded-lg">
       <img
         src={user.avatarUrl}
         alt={user.firstName}
@@ -15,16 +15,11 @@ export default function CreatePost({ user }: CreatePostProps) {
       <input
         type="text"
         placeholder="Напишите что-нибудь"
-        className="flex-1 bg-transparent outline-none text-sm placeholder:text-gray-500"
+        className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-gray-500"
       />
-      <div className="flex items-center gap-2">
-        <button className="text-gray-400 hover:text-white p-1">
-          <img src="/images/smile.svg" alt="" />
-        </button>
-        <button className="p-2 bg-[#9B78FF] text-black rounded hover:bg-[#b091ff] transition">
-          <img src="/images/cursor.svg" alt="" />
-        </button>
-      </div>
+      <button className="p-2 bg-[#9B78FF] text-black rounded hover:bg-[#b091ff] transition">
+        <img src="/images/cursor.svg" alt="" className="w-4 h-4" />
+      </button>
     </div>
   );
 }

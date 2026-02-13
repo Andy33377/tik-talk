@@ -1,76 +1,74 @@
-import { mockCurrentUser } from "@/shared/mocks/users";
 import EditProfileAvatar from "../EditProfileAvatar/EditProfileAvatar";
 import EditProfileSkills from "../EditProfileSkills/EditProfileSkills";
 
-interface InputProps {
-  label: string;
-  placeholder: string;
-}
-
-function Input({ label, placeholder }: InputProps) {
-  return (
-    <div className="flex flex-col gap-2">
-      <label className="text-sm text-gray-400">{label}</label>
-      <input
-        placeholder={placeholder}
-        className="bg-transparent border-b border-white/30 py-2 outline-none focus:border-[#9B78FF] transition"
-      />
-    </div>
-  );
-}
-
-interface TextareaProps {
-  label: string;
-  placeholder: string;
-}
-
-function Textarea({ label, placeholder }: TextareaProps) {
-  return (
-    <div className="flex flex-col gap-2">
-      <label className="text-sm text-gray-400">{label}</label>
-      <textarea
-        rows={4}
-        placeholder={placeholder}
-        className="bg-transparent border-b border-white/30 py-2 outline-none resize-none focus:border-[#9B78FF] transition"
-      />
-    </div>
-  );
-}
-
 export default function EditProfileForm() {
   return (
-    <div className="max-w-[600px]">
-      <div className="flex justify-end mb-6">
-        <button className="text-gray-400 hover:text-white">⋯</button>
+    <div className="space-y-12 text-white">
+      {/* Name row */}
+      <div className="grid grid-cols-2 gap-16">
+        <div className="flex flex-col gap-3">
+          <label className="text-sm text-gray-400">Имя</label>
+          <input
+            defaultValue="Райан"
+            className="bg-transparent border-b border-white/30 pb-3 text-lg outline-none"
+          />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <label className="text-sm text-gray-400">Фамилия</label>
+          <input
+            defaultValue="Гослинг"
+            className="bg-transparent border-b border-white/30 pb-3 text-lg outline-none"
+          />
+        </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mb-6">
-        <Input label="Имя" placeholder="Райан" />
-        <Input label="Фамилия" placeholder="Гослинг" />
+      {/* Telegram */}
+      <div className="flex flex-col gap-3">
+        <label className="text-sm text-gray-400">Telegram username</label>
+        <input
+          defaultValue="ryan.gosling"
+          className="bg-transparent border-b border-white/30 pb-3 text-lg outline-none"
+        />
       </div>
 
-      <div className="mb-6">
-        <Input label="Telegram username" placeholder="ryan.gosling" />
-      </div>
-
-      <div className="mb-6">
-        <Textarea
-          label="О себе"
-          placeholder="Список навыков, который мы обсудили выше..."
+      {/* About */}
+      <div className="flex flex-col gap-4">
+        <label className="text-sm text-gray-400">О себе</label>
+        <textarea
+          rows={4}
+          defaultValue="Список навыков, который мы обсудили выше, — основа резюме, но не единственная его часть. Также можно рассказать о себе в классическом смысле — этот раздел можно добавить в сопроводительное письмо."
+          className="bg-transparent border-b border-white/30   text-[15px] leading-7 outline-none resize-none"
         />
       </div>
 
       <EditProfileAvatar />
-
       <EditProfileSkills />
 
-      <div className="flex justify-end gap-4 mt-10">
-        <button className="px-6 py-2 border border-white/30 rounded hover:border-white/50 transition">
-          Отмена
-        </button>
-        <button className="px-6 py-2 bg-[#9B78FF] text-black rounded hover:bg-[#b091ff] transition font-medium">
-          Сохранить
-        </button>
+      {/* Footer */}
+      <div className="flex items-center justify-between  border-white/10">
+        <div className="flex gap-6">
+          <div>
+            <button className="w-[56px] h-[56px] border border-white/20 rounded-md flex items-center justify-center hover:bg-white/5 transition">
+              <img src="/images/edit-profile/garb.svg" alt="" />
+            </button>
+          </div>
+          <div>
+            <button className="w-[56px] h-[56px] border border-white/20 rounded-md flex items-center justify-center hover:bg-white/5 transition">
+              <img src="/images/edit-profile/out.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div className="flex gap-6">
+          <button className="px-10 py-3 border border-white/20 rounded-md hover:bg-white/5 transition">
+            Отмена
+          </button>
+
+          <button className="px-10 py-3 bg-[#9B78FF] rounded-md hover:bg-[#b091ff] transition">
+            Сохранить
+          </button>
+        </div>
       </div>
     </div>
   );
